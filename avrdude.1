@@ -510,7 +510,9 @@ For programmers using the "USBasp" protocol, the port can be specified as
 If
 .Ar serialno
 is specified, only devices with matching usb serial number strings (case
-insensitive) will be considered.
+insensitive) will be considered.  It is sufficient if the device's usb serial
+number is a prefix of
+.Ar serialno .
 .Pp
 For the USB programmer "AVR-Doper" running in HID mode, the port must
 be specified as

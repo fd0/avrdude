@@ -276,7 +276,7 @@ static int usbOpenDevice(libusb_device_handle **device, int vendor,
 		        fprintf(stderr,
 				"%s: seen serial number ->%s<-\n",
 				progname, string);
-                    if(strcasecmp(string, serialNumber) != 0){
+                    if(strncasecmp(string, serialNumber, strlen(serialNumber)) != 0){
                         /* serial number does not match, close handle and continue */
                         usb_close(handle);
                         handle = NULL;
@@ -392,7 +392,7 @@ static int           didUsbInit = 0;
 		        fprintf(stderr,
 				"%s: seen serial number ->%s<-\n",
 				progname, string);
-                    if(strcasecmp(string, serialNumber) != 0){
+                    if(strncasecmp(string, serialNumber, strlen(serialNumber)) != 0){
                         /* serial number does not match, close handle and continue */
                         usb_close(handle);
                         handle = NULL;
