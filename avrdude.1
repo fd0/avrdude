@@ -505,6 +505,13 @@ from the serial number need to be given.
 As the AVRISP mkII device can only be talked to over USB, the very
 same method of specifying the port is required there.
 .Pp
+For programmers using the "USBasp" protocol, the port can be specified as
+.Pa usb Ns Op \&: Ns Ar serialno .
+If
+.Ar serialno
+is specified, only devices with matching usb serial number strings (case
+insensitive) will be considered.
+.Pp
 For the USB programmer "AVR-Doper" running in HID mode, the port must
 be specified as
 .Ar avrdoper.
